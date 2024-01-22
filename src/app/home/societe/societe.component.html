@@ -1,0 +1,54 @@
+<div class="container">
+  <div class="sixteen columns">
+    <h3 class="margin-bottom-20 margin-top-10"></h3>
+
+    <!-- Popular Categories -->
+    <div class="categories-boxes-container">
+
+      <!-- Box -->
+
+      <div class="one-third column">
+        <div class="icon-box rounded alt">
+           </div>
+      </div>
+
+      <a  class="icon-box rounded alt" routerLink="/espaceentreprise/ajouterStage">
+        <i class="ln   ln-icon-Add-File"></i>
+        <h4>Publier une offre de stage</h4>
+      </a>
+
+      <a class="icon-box rounded alt" routerLink="/espaceentreprise/Demandes">
+        <i class="ln ln-icon-Business-ManWoman"></i>
+        <h4>Demandes des Stages</h4>
+
+      </a>
+
+
+
+    </div>
+
+    <div class="clearfix"></div>
+    <div class="margin-top-30"></div>
+
+  </div>
+  <div class="sixteen columns">
+    <h2 class="margin-bottom-20" style="color: #1da1f2">Liste des Offres</h2>
+  </div>
+
+  <div class="plan color-2 one-third column" *ngFor="let e of listestage">
+    <div class="plan-price">
+      <h3>{{e.type}}</h3>
+      <span class="plan-currency">{{e.titre}}</span>
+
+    </div>
+    <div class="plan-features">
+      <ul>
+        <li>Durée: <span>{{e.duree}}</span></li>
+        <li>Nombre Demandée : <span>{{e.nombrestagiaire}}</span></li>
+      </ul>
+      <a class="button" routerLink="/espaceentreprise/{{e.id}}/detaillestage"><i class="fa fa-info"></i> Détaille/modifier</a>
+      <a class="button" (click)="supprimer(e.id)"><i class="fa fa-trash-o"></i> Supprimer</a>
+    </div>
+  </div>
+
+</div>

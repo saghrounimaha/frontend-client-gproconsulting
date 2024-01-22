@@ -1,0 +1,48 @@
+<div class="container">
+
+  <!-- Recent Jobs -->
+  <div class="col-lg-12">
+    <div >
+
+      <!-- Company Info -->
+      <div class="company-info">
+        <img src="http://localhost:9000/upload/files/{{detaimlf.centreForma.photo}}" alt="">
+        <div class="content">
+          <h4>Sujet Fomration :{{detaimlf.titre}}</h4>
+          <span><a style="color: #0c6aca"> Numéro de  télephone : {{detaimlf.centreForma.telephone}}</a></span>
+          <br>
+          <span><a  style="color: #0c6aca">Email :  {{detaimlf.centreForma.email}}</a></span>
+        </div>
+        <div class="clearfix"></div>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <h5 style="color: firebrick" *ngIf="!statu"> ****vous devez š'inscrire  pour participer dans une formation **</h5>
+        <button type="submit" routerLink= "/centreformation/detailleformation/{{detaimlf.id}}/postuler"  *ngIf="statu">Postuler</button>
+      </div>
+
+      <p class="margin-reset">
+        <strong>{{detaimlf.descreption}}</strong>
+      </p>
+
+      <br>
+
+
+      <h4 class="margin-bottom-10">Prix Formation : {{detaimlf.prix}}</h4>
+
+<div>
+  <h2 style="color: red">Information sur le Centre de Fomration :</h2>
+  <hr>
+  <h5 style="color: #2e689a"> Nom Centre :{{detaimlf.centreForma.nom}}</h5>
+ <br>
+  <h5 style="color: gray"> Adresse Centre : {{detaimlf.centreForma.adresse}}</h5>
+</div>
+
+
+
+    </div>
+  </div>
+</div>

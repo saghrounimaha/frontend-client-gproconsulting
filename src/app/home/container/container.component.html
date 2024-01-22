@@ -1,0 +1,79 @@
+<!-- Recent Posts -->
+<div class="container">
+  <div class="sixteen columns">
+    <h3 class="margin-bottom-25">Offres des Satges</h3>
+  </div>
+
+  <div class="one-third column" *ngFor="let e of listestages">
+
+    <!-- Post #1 -->
+    <div class="recent-post">
+      <div class="recent-post-img"><a ><img src="http://localhost:9000/upload/files/{{e.societe.photo}}" alt=""></a><div class="hover-icon"></div></div>
+      <a><h4>{{e.titre}}</h4></a>
+      <div class="meta-tags">
+        <h4 style="color: red"> Sociéte : {{e.societe.nom}}</h4>
+        <span style="color: #0c6aca">  Type de Satge : {{e.type}}</span>
+      </div>
+      <h5>Date début :{{e.dateDebut}}</h5>
+      <h5>Date Fin  :{{e.dateFin}}</h5>
+      <p></p>
+      <a  class="button"  routerLink="espaceentreprise/{{e.id}}/detaillestagee">Détaille</a>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Flip banner -->
+<button  class="flip-banner margin-bottom-55" data-background="../../assets/images/all-categories-photo.jpg" data-color="#26ae61" data-color-opacity="0.93">
+  <div class="flip-banner-content">
+    <h2 >Offres des Formations</h2>
+  </div>
+</button>
+<!-- Flip banner / End -->
+<div class="container">
+  <div class="sixteen columns">
+    <h3 class="margin-bottom-25">Offres des Formations</h3>
+  </div>
+  <!-- Recent Jobs -->
+  <div class="row">
+    <div class="col-lg-12">
+      <a class="listing full-time" *ngFor="let e of listeformations">
+        <div class="listing-logo">
+          <img src="http://localhost:9000/upload/files/{{e.photo}}" alt="">
+        </div>
+        <div class="listing-title">
+          <h4>{{e.titre}}</h4>
+          <ul class="listing-icons">
+            <li><i class="ln ln-icon-Management"></i> {{e.centreForma.nom}}</li>
+            <li style="color: red"><i class="ln ln-icon-Money-2"></i> Prix Formation : {{e.prix}}</li>
+            <li><div class="listing-date new" ><a routerLink="/centreformation/{{e.id}}/detailleformation">Détaille</a> </div></li>
+          </ul>
+        </div>
+        <div >
+          <h5> Date  début de  Formation : {{e.dateDebut|date}}</h5>
+          <h5> Date  Fin de  Formation : {{e.dateFin|date}}</h5>
+
+        </div>
+
+      </a>
+      <div class="margin-bottom-55"></div>
+    </div>
+  </div>
+
+  <!-- Job Spotlight -->
+
+</div>
+
+
+

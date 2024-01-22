@@ -1,0 +1,61 @@
+
+
+<header class="transparent sticky-header">
+  <div class="container">
+    <div class="sixteen columns">
+
+      <!-- Logo -->
+      <div id="logo ">
+
+
+      </div>
+
+      <!-- Menu -->
+      <nav id="navigation" class="menu">
+
+
+        <ul class="float-right">
+          <li *ngIf="!etat"><a routerLink="/societes"><i class="fa fa-user"></i> Espace Entreprise</a></li>
+          <li *ngIf="!etat"><a routerLink="/centres"><i class="fa fa-user"></i> Centre de Formation</a></li>
+          <li *ngIf="!etat"><a routerLink="/inscription"><i class="fa fa-user"></i> Condidat</a></li>
+          <li *ngIf="!etat"><a routerLink="/login" ><i class="fa fa-lock">Connexion</i></a></li>
+          <li *ngIf="etat" type="button"><a (click)="deconnexion()" > <i class="fa fa-sign-out" >Deconnexion</i></a></li>
+
+        </ul>
+
+      </nav>
+
+      <!-- Navigation -->
+      <div id="mobile-navigation">
+        <a class="menu-trigger"><i class="fa fa-reorder"></i></a>
+      </div>
+
+    </div>
+  </div>
+</header>
+<div class="clearfix"></div>
+
+
+<!-- Banner
+================================================== -->
+<div id="banner" class="with-transparent-header parallax background" style="background-image: url(../../assets/images/banner-home-02.jpg)" data-img-width="2000" data-img-height="1330" data-diff="300">
+  <div class="container">
+    <div class="sixteen columns">
+
+      <div class="search-container">
+
+        <!-- Form -->
+        <h2>Les Offres des Stages et des Formations</h2>
+
+        <!-- Browse Jobs -->
+        <div class="browse-jobs">
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,76 @@
+
+<div class="container">
+<!-- Titlebar -->
+<div id="titlebar">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 style="color: #0c6aca">Publier  une Offre de Stage</h2>
+      <!-- Breadcrumbs -->
+      <nav id="breadcrumbs">
+      </nav>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-lg-12 col-md-12">
+
+    <div class="dashboard-list-box margin-top-0">
+
+      <div class="dashboard-list-box-content">
+
+        <div class="submit-page">
+
+          <div class="form">
+            <h5>Titre :</h5>
+            <input class="search-field" type="text" [(ngModel)]="stage.titre" name="stage.titre"/>
+          </div>
+          <div class="form">
+            <h5>Durée :</h5>
+            <input class="search-field" type="text"   [(ngModel)]="stage.duree" name="stage.duree"/>
+          </div>
+          <div class="form">
+            <h5>Type de Stage</h5>
+            <input class="search-field" type="radio"  [(ngModel)]="stage.type" name="stage.type" value="stage d'ete"/>
+            <span>Stage d'été</span>
+            <input class="search-field" type="radio"  [(ngModel)]="stage.type" name="stage.type" value="stage pfe"/>
+            <span>Stage PFE</span>
+          </div>
+          <div class="form">
+            <h5>Technologies</h5>
+            <input class="search-field" type="text"   [(ngModel)]="stage.technologie" name="stage.technologie"/>
+          </div>
+          <div class="form">
+            <h5>Nombre des Stagiaire Demandes</h5>
+            <input class="search-field" type="text"   [(ngModel)]="stage.nombrestagiaire" name="stage.nombrestagiaire"/>
+          </div>
+          <div class="form">
+            <h5> Date début Stage:</h5>
+            <input class="search-field" type="date" placeholder=""  [(ngModel)]="stage.dateDebut" name="stage.dateDebut" />
+          </div>
+          <div class="form" >
+            <h5> Date fin de  Stage:</h5>
+            <input class="search-field" type="date" placeholder="" [(ngModel)]="stage.dateFin" name="stage.dateFin"/>
+          </div>
+          <div class="form" style="width: 100%;">
+            <h5>Description :</h5>
+            <textarea class="WYSIWYG"  cols="40" rows="3" spellcheck="true"  [(ngModel)]="stage.descreption" name="stage.descreption"></textarea>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <div class="col-md-12">
+
+    &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    <a  class="button margin" (click)="ajouter()">Ajouter </a>
+  </div>
+</div>
+</div>

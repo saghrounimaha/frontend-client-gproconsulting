@@ -1,0 +1,30 @@
+.button1
+{
+  background-color:grey;
+  border: none;
+  border-radius:50px;
+  text-decoration : none;
+  width:250px;
+  height:70px;
+}
+
+.button2
+{
+  background-color:blue;
+  border: none;
+  border-radius:50px;
+  text-decoration : none;
+  width:250px;
+  height:70px;
+}
+
+
+.button3
+{
+  background-color:green;
+  border: none;
+  border-radius:50px;
+  text-decoration : none;
+  width:250px;
+  height:70px;
+}

@@ -1,0 +1,59 @@
+<div class="container">
+
+  <!-- Recent Jobs -->
+  <div class="col-lg-12">
+    <div >
+
+      <!-- Company Info -->
+      <div class="company-info">
+        <img src="http://localhost:9000/upload/files/{{detstage.societe.photo}}" alt="">
+        <div class="content">
+          <h4>Sujet Fomration :{{detstage.titre}}</h4>
+          <span><a style="color: #0c6aca"> Numéro de  télephone : {{detstage.societe.telephone}}</a></span>
+          <br>
+          <span><a  style="color: #0c6aca">Email :  {{detstage.societe.email}}</a></span>
+        </div>
+        <div class="clearfix"></div>
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <h5 style="color: firebrick" *ngIf="!statu"> ****vous devez š'inscrire pour postuler dans une offre de stage***</h5>
+        <button type="submit"   routerLink="/espaceentreprise/detaillestagee/{{detstage.id}}/postuler"   *ngIf="statu"> Postuler</button>
+      </div>
+
+      <p class="margin-reset">
+        <strong> Détaille : {{detstage.descreption}}</strong>
+      </p>
+      <br>
+      <br>
+      <h4 style="color: #3bc1ed"> Type de Stage : {{detstage.type}}</h4>
+      <br><br>
+      <p class="margin-reset">
+        Les Téchnologies necesaires : {{detstage.technologie}}
+      </p>
+
+      <br>
+
+
+      <div>
+        <h2 style="color: red">Information sur la Societe :</h2>
+        <hr>
+        <h5 style="color: #2e689a"> Nom Centre :{{detstage.societe.nom}}</h5>
+
+        <br>
+        <h5 style="color: #2e689a"> Adresse Centre : {{detstage.societe.adresse}}</h5>
+        <br>
+        <h5 style="color: #2e689a"> site Web : {{detstage.societe.siteweb}}</h5>
+        <br>
+        <p > Déscription Sociéte : {{detstage.societe.descreption}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

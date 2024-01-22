@@ -1,0 +1,159 @@
+
+<div id="wrapper">
+
+
+  <!-- Header
+  ================================================== -->
+
+  <div class="clearfix"></div>
+
+
+  <div class="container">
+
+    <div class="my-account">
+      <h2 style="color: #26ae61">Inscription Societe</h2>
+
+      <div class="tabs-container">
+        <!-- Login -->
+
+        <div class="tab-content" >
+
+          <form class="register" [formGroup]="registerForm" (ngSubmit)="inscriptionentreprise()" >
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+
+                <label style="color: #0c6aca;font-size: 20px" >Choisir un Secteur: </label>
+
+                <select class="input-text" formControlName="ids" [ngClass]="{ 'is-invalid': submitted && f.ids.errors }" style="height: 45px">
+                  <option *ngFor="let e of listesecteur " value={{e.id}}> {{e.name}}</option>
+                </select>
+                <div *ngIf="submitted && f.ids.errors" class="invalid-feedback">
+                  <div *ngIf="f.ids.errors.required" style="color: red">Champ obligatoire</div>
+                </div>
+              </div></div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Nom Societe:</label>
+                <input type="text" class="input-text" formControlName="nom"  [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
+
+              </div>
+              <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+                <div *ngIf="f.nom.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Email :
+                </label>
+                <input type="text" class="input-text"  formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"   />
+              </div>
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required" style="color: red">Champ obligatoire</div>
+                <div *ngIf="f.email.errors.email" style="color: red">L'email doit être une adresse email valide</div>
+              </div></div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Télephone :
+                </label>
+                <input type="number" class="input-text"  formControlName="telephone" [ngClass]="{ 'is-invalid': submitted && f.telephone.errors }"   />
+              </div>
+              <div *ngIf="submitted && f.telephone.errors" class="invalid-feedback">
+                <div *ngIf="f.telephone.errors.required" style="color: red">Champ obligatoire</div>
+
+              </div></div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Login:
+                  <input type="text" class="input-text" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                </label>
+              </div>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Mot de passe: </label>
+                <input class="input-text" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+
+              </div>
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Confirmer mot de passe:
+
+                </label>
+                <input class="input-text" type="password" formControlName="confirmedPassword"  [ngClass]="{ 'is-invalid': submitted && f.confirmedPassword.errors }"/>
+              </div>
+              <div *ngIf="submitted && f.confirmedPassword.errors" class="invalid-feedback">
+                <div *ngIf="f.confirmedPassword.errors.required" style="color: red">Champ obligatoire</div>
+                <div *ngIf="f.confirmedPassword.errors.mustMatch" style="color: red">le mots de passe ñ'est pas identique</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Adresse:
+
+                </label>
+                <input class="input-text" type="text" formControlName="adresse"  [ngClass]="{ 'is-invalid': submitted && f.adresse.errors }"/>
+              </div>
+              <div *ngIf="submitted && f.adresse.errors" class="invalid-feedback">
+                <div *ngIf="f.adresse.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Site web:
+
+                </label>
+                <input class="input-text" type="text" formControlName="siteweb"  [ngClass]="{ 'is-invalid': submitted && f.siteweb.errors }"/>
+              </div>
+              <div *ngIf="submitted && f.siteweb.errors" class="invalid-feedback">
+                <div *ngIf="f.siteweb.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Description: </label>
+                <textarea class="input-text" type="text" formControlName="descreption" [ngClass]="{ 'is-invalid': submitted && f.descreption.errors }"></textarea>
+
+              </div>
+              <div *ngIf="submitted && f.descreption.errors" class="invalid-feedback">
+                <div *ngIf="f.descreption.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Logo:</label>
+                <input type="file" class="input-text" (change)="recuperFile($event)" />
+              </div></div>
+
+
+
+
+
+            <button class="button border fw margin-top-10"  type="submit"> Enregistrer</button>
+
+          </form>
+
+        </div>
+        <!-- Register -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer
+  ================================================== -->
+  <div class="margin-top-30"></div>
+
+
+
+</div>

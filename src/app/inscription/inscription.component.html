@@ -1,0 +1,116 @@
+
+<div id="wrapper">
+
+
+  <!-- Header
+  ================================================== -->
+
+  <div class="clearfix"></div>
+
+
+  <!-- Titlebar
+  ================================================== -->
+
+
+
+  <!-- Content
+  ================================================== -->
+
+  <!-- Container -->
+  <div class="container">
+
+    <div class="my-account">
+
+     <h2 style="color: #26ae61">Inscription</h2>
+
+      <div class="tabs-container">
+        <!-- Login -->
+
+        <div class="tab-content" id="tab2" >
+
+          <form  class="register"  [formGroup]="registerForm" (ngSubmit)="inscription()">
+             <div class="form-group">
+               <div class="form-row form-row-wide">
+                 <label >Nom:</label>
+                 <input type="text" class="input-text" formControlName="nom"  [ngClass]="{ 'is-invalid': submitted && f.nom.errors }" />
+
+               </div>
+               <div *ngIf="submitted && f.nom.errors" class="invalid-feedback">
+                 <div *ngIf="f.nom.errors.required" style="color: red">Champ obligatoire</div>
+               </div>
+             </div>
+            <div class="form-group">
+            <div class="form-row form-row-wide">
+              <label >Prénom:
+              </label>
+              <input type="text" class="input-text" formControlName="prenom"  [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }"   />
+            </div>
+              <div *ngIf="submitted && f.prenom.errors" class="invalid-feedback">
+                <div *ngIf="f.prenom.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+            <div class="form-row form-row-wide">
+              <label >Email :
+              </label>
+              <input type="text" class="input-text"  formControlName="email" [ngClass]="{ 'is-invalid': submitted && f.prenom.errors }"   />
+            </div>
+              <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                <div *ngIf="f.email.errors.required" style="color: red">Champ obligatoire</div>
+                <div *ngIf="f.email.errors.email" style="color: red">L'email doit être une adresse email valide</div>
+              </div></div>
+            <div class="form-group">
+              <div class="form-row form-row-wide">
+                <label >Login:
+                  <input type="text" class="input-text" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                </label>
+              </div>
+              <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                <div *ngIf="f.username.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+            <div class="form-row form-row-wide">
+              <label >Mot de passe: </label>
+                <input class="input-text" type="password" formControlName="password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+
+            </div>
+              <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                <div *ngIf="f.password.errors.required" style="color: red">Champ obligatoire</div>
+              </div>
+            </div>
+            <div class="form-group">
+             <div class="form-row form-row-wide">
+               <label >Confirmer mot de passe:
+
+               </label>
+               <input class="input-text" type="password" formControlName="confirmedPassword"  [ngClass]="{ 'is-invalid': submitted && f.confirmedPassword.errors }"/>
+             </div>
+             <div *ngIf="submitted && f.confirmedPassword.errors" class="invalid-feedback">
+               <div *ngIf="f.confirmedPassword.errors.required" style="color: red">Champ obligatoire</div>
+               <div *ngIf="f.confirmedPassword.errors.mustMatch" style="color: red">le mots de passe ñ'est pas identique</div>
+             </div>
+           </div>
+
+
+            <p class="form-row">
+              <button type="submit" class="button border fw margin-top-10"  >Enregistrer</button>
+            </p>
+
+          </form>
+        </div>
+        <!-- Register -->
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Footer
+  ================================================== -->
+  <div class="margin-top-30"></div>
+
+
+
+</div>
